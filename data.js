@@ -51,15 +51,27 @@ const data = {
     sql: '<img src="./images/SQL.png" alt="p5">',
   },
   buttons: {
-    projects: '<i class="far fa-folder"></i>',
-    linkedin: '<i class="fab fa-linkedin"></i>',
-    github: '<i class="fab fa-github-square"></i>',
-    email: '<i class="far fa-envelope"></i>',
-    whatsapp: '<i class="fab fa-whatsapp-square"></i>',
-    codewars: '<i class="fab fa-galactic-republic"></i>',
-    hackerrank: '<i class="fab fa-hackerrank"></i>',
-    art: '<i class="fas fa-pencil-alt"></i>',
+    projects: ['<i class="far fa-folder"></i>'],
+    email: ['<i class="far fa-envelope"></i>'],
+    linkedin: ['<i class="fab fa-linkedin"></i>', 'https://www.linkedin.com/in/filipelouzano/'],
+    github: ['<i class="fab fa-github-square"></i>', 'https://github.com/MEianelli'],
+    whatsapp: [
+      '<i class="fab fa-whatsapp-square"></i>',
+      'https://api.whatsapp.com/send?phone=16478986972&text=Hi%Filipe:',
+    ],
+    codewars: [
+      '<i class="fab fa-galactic-republic"></i>',
+      'https://www.codewars.com/users/MEianelli',
+    ],
+    hackerrank: ['<i class="fab fa-hackerrank"></i>', 'https://www.hackerrank.com/filipelouzano'],
+    art: ['<i class="fas fa-pencil-alt"></i>'],
   },
 };
 
 export { data };
+
+//https://www.linkedin.com/in/filipelouzano/
+//https://github.com/MEianelli
+//https://www.codewars.com/users/MEianelli
+//https://www.hackerrank.com/filipelouzano
+//https://api.whatsapp.com/send?phone=16478986972&text=Hi%Filipe:

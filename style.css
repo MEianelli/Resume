@@ -20,6 +20,11 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 body {
   margin: auto;
 
@@ -246,4 +251,22 @@ body {
 .close-overlay:hover {
   background-color: #f8f7ff22;
   color: #000000bb;
+}
+
+/***************************/
+/****** OVERLAY DIVS********/
+/***************************/
+
+.art-card {
+  width: 30%;
+  height: 30%;
+  border: 1px solid #f8f7ff22;
+  box-shadow: -2px -2px 1px black;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.art-card:hover {
+  border: 2px solid #f8f7ffff;
 }
