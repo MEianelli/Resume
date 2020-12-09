@@ -11,16 +11,6 @@ window.onload = function () {
   closeButton.addEventListener('click', closeCover);
 
   createButtons();
-  const buttons = document.querySelectorAll('.buttons li');
-
-  buttons[0].addEventListener('click', () => {
-    createCoverContent('projects');
-  });
-
-  buttons[buttons.length - 1].addEventListener('click', () => {
-    createCoverContent('art');
-  });
-
   rotateArts();
 };
 
@@ -85,7 +75,6 @@ function openOverlay(link) {
   overlay.innerHTML = `
   <div class="close-overlay">X</div>
   <iframe src="${link}" frameborder="0"></iframe>`;
-  //window.open(link, '_blank');
 }
 
 function applyLinksToCards() {
@@ -119,21 +108,59 @@ function createCard(obj) {
   return cardHTML;
 }
 
-function createButtons() {
-  const { buttons } = data;
+function addClickOpenCover(title) {
+  const button = document.querySelector(`#${title}`);
+  button.addEventListener('click', () => {
+    createCoverContent(title);
+  });
+}
+
+function attachExternalLink(title, link) {
+  const button = document.querySelector(`#${title}`);
+  const tempHTML = button.innerHTML;
+  button.innerHTML = `
+  <a href="${link}" target="_blank">${tempHTML}</a>
+  `;
+}
+
+function copyToClip(title, link) {
+  const button = document.querySelector(`#${title}`);
+  button.addEventListener('click', () => {
+    const input = document.createElement('input');
+    input.setAttribute('value', link);
+    document.body.appendChild(input);
+    input.select();
+    let result = document.execCommand('copy');
+    alert(`${link} copied to clipboard`);
+    document.body.removeChild(input);
+  });
+}
+
+function createButtonHTML({ title, icon, link, toDoFunction }) {
   const buttonsContainer = document.querySelector('.buttons');
-  Object.keys(buttons).forEach(key => {
-    const buttonHTML = `
-    <li>
-    ${buttons[key][0]}
-    <p>${key}</p>
+  const buttonHTML = `
+    <li id="${title}">
+    ${icon}
+    <p>${title}</p>
     </li>
     `;
-    if (buttons[key][1]) {
-      const aElement = `<a href="${buttons[key][1]}" target="_blank">${buttonHTML}</a>`;
-      buttonsContainer.innerHTML += aElement;
-    } else {
-      buttonsContainer.innerHTML += buttonHTML;
+  buttonsContainer.innerHTML += buttonHTML;
+  setTimeout(() => {
+    switch (toDoFunction) {
+      case 'addClickOpenCover':
+        addClickOpenCover(title);
+        break;
+      case 'copyToClip':
+        copyToClip(title, link);
+        break;
+      case 'attachExternalLink':
+        attachExternalLink(title, link);
+        break;
     }
-  });
+  }, 200);
+}
+
+function createButtons() {
+  const { buttons } = data;
+  buttons.forEach(button => createButtonHTML(button));
 }

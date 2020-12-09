@@ -50,28 +50,63 @@ const data = {
     php: '<i class="fab fa-php"></i>',
     sql: '<img src="./images/SQL.png" alt="p5">',
   },
-  buttons: {
-    projects: ['<i class="far fa-folder"></i>'],
-    email: ['<i class="far fa-envelope"></i>'],
-    linkedin: ['<i class="fab fa-linkedin"></i>', 'https://www.linkedin.com/in/filipelouzano/'],
-    github: ['<i class="fab fa-github-square"></i>', 'https://github.com/MEianelli'],
-    whatsapp: [
-      '<i class="fab fa-whatsapp-square"></i>',
-      'https://api.whatsapp.com/send?phone=16478986972&text=Hi%Filipe:',
-    ],
-    codewars: [
-      '<i class="fab fa-galactic-republic"></i>',
-      'https://www.codewars.com/users/MEianelli',
-    ],
-    hackerrank: ['<i class="fab fa-hackerrank"></i>', 'https://www.hackerrank.com/filipelouzano'],
-    art: ['<i class="fas fa-pencil-alt"></i>'],
-  },
+  buttons: [
+    {
+      title: 'projects',
+      icon: '<i class="far fa-folder"></i>',
+      link: 'projects',
+      toDoFunction: 'addClickOpenCover',
+    },
+    {
+      title: 'email',
+      icon: '<i class="far fa-envelope"></i>',
+      link: 'filipelouzano@gmail.com',
+      toDoFunction: 'copyToClip',
+    },
+    {
+      title: 'linkedin',
+      icon: '<i class="fab fa-linkedin"></i>',
+      link: 'https://www.linkedin.com/in/filipelouzano/',
+      toDoFunction: 'attachExternalLink',
+    },
+    {
+      title: 'github',
+      icon: '<i class="fab fa-github-square"></i>',
+      link: 'https://github.com/MEianelli',
+      toDoFunction: 'attachExternalLink',
+    },
+    {
+      title: 'whatsapp',
+      icon: '<i class="fab fa-whatsapp-square"></i>',
+      link: 'https://api.whatsapp.com/send?phone=16478986972&text=Hi%Filipe:',
+      toDoFunction: 'attachExternalLink',
+    },
+    {
+      title: 'codewars',
+      icon: '<i class="fab fa-galactic-republic"></i>',
+      link: 'https://www.codewars.com/users/MEianelli',
+      toDoFunction: 'attachExternalLink',
+    },
+    {
+      title: 'hackerrank',
+      icon: '<i class="fab fa-hackerrank"></i>',
+      link: 'https://www.hackerrank.com/filipelouzano',
+      toDoFunction: 'attachExternalLink',
+    },
+    {
+      title: 'art',
+      icon: '<i class="fas fa-pencil-alt"></i>',
+      link: 'art',
+      toDoFunction: 'addClickOpenCover',
+    },
+  ],
 };
 
 export { data };
-
+/*
 //https://www.linkedin.com/in/filipelouzano/
 //https://github.com/MEianelli
 //https://www.codewars.com/users/MEianelli
 //https://www.hackerrank.com/filipelouzano
 //https://api.whatsapp.com/send?phone=16478986972&text=Hi%Filipe:
+*/
