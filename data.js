@@ -3,7 +3,7 @@ const data = {
     {
       title: 'flyingLetters',
       description:
-        'First attempt/idea for a portfolio website whhere I used p5.js library to create this cool flying text effect',
+        'Idea for a portfolio website whhere I used p5.js library to create this cool flying text effect',
       img: './images/flyingLetters.jpg',
       link: 'https://meianelli.github.io/site-resume-moving-text/',
       techs: ['js', 'css', 'html', 'p5'],
@@ -19,7 +19,7 @@ const data = {
     {
       title: 'Puzzle',
       description:
-        'Another idea/attempt for a portfolio website, this time I used the p5.js library to create the tiles puzzle game with years info. You can use arrows keys to play.',
+        'Another idea for a portfolio website, this time I used the p5.js library to create the tiles puzzle game with years info. You can use arrows keys to play.',
       img: './images/puzzle.jpg',
       link: 'https://meianelli.github.io/site-resume-scramble/',
       techs: ['js', 'css', 'html', 'p5'],
@@ -39,6 +39,28 @@ const data = {
       img: './images/plinko.jpg',
       link: 'https://meianelli.github.io/Plinko/',
       techs: ['js', 'css', 'html', 'p5'],
+    },
+    {
+      title: 'Moving Picture',
+      description:
+        'First portifolio website made during Trybe classes. I added the moving picture animation',
+      img: './images/movingPic.jpg',
+      link: 'https://meianelli.github.io/portifolio/#foto',
+      techs: ['js', 'css', 'html', 'p5'],
+    },
+    {
+      title: 'Click game',
+      description: 'Learning how to use addeventlistener and add DOM elements',
+      img: './images/click.jpg',
+      link: 'https://meianelli.github.io/poping-boxes/',
+      techs: ['js', 'css', 'html'],
+    },
+    {
+      title: 'Avoa Wix',
+      description: 'Another design option for AVOA website',
+      img: './images/avoa-wix.jpg',
+      link: 'https://meianelli.github.io/avoa-wix/',
+      techs: ['js', 'css', 'html'],
     },
   ],
   techslinks: {
