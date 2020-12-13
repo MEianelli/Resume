@@ -103,10 +103,3 @@ const data = {
 };
 
 export { data };
-/*
-//https://www.linkedin.com/in/filipelouzano/
-//https://github.com/MEianelli
-//https://www.codewars.com/users/MEianelli
-//https://www.hackerrank.com/filipelouzano
-//https://api.whatsapp.com/send?phone=16478986972&text=Hi%Filipe:
-*/

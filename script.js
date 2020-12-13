@@ -5,12 +5,14 @@ import { data } from './data.js';
 const cover = document.querySelector('.cover');
 const closeButton = document.querySelector('.close-button');
 const overlay = document.querySelector('.overlay');
+const rightPanel = document.querySelector('.right-panel');
 
 window.onload = function () {
   overlay.addEventListener('click', closeOverlay);
   closeButton.addEventListener('click', closeCover);
 
   createButtons();
+
   rotateArts();
 };
 
@@ -21,11 +23,40 @@ function createProjectCards() {
   });
 }
 
+function closeBigImgContainer() {
+  const bigImgContainer = document.querySelector('.bigImgContainer');
+  bigImgContainer.style.display = 'none';
+}
+
+function showBigImg(imgSrc) {
+  const bigImgContainer = document.querySelector('.bigImgContainer');
+  const bigArtCard = `<img class="big-art-card" src="${imgSrc}" alt="bigImg">`;
+  bigImgContainer.innerHTML = bigArtCard;
+  bigImgContainer.style.display = 'block';
+}
+
+function applyClickToArtCards() {
+  const artCards = document.querySelectorAll('.art-card');
+  const bigImgContainer = document.querySelector('.bigImgContainer');
+  bigImgContainer.addEventListener('click', closeBigImgContainer);
+  artCards.forEach(element => {
+    element.addEventListener('click', e => {
+      showBigImg(e.target.attributes.src.value);
+    });
+  });
+}
+
 function createArtCards() {
+  const bigImgContainer = document.createElement('div');
+  bigImgContainer.classList.add('bigImgContainer');
+  document.body.appendChild(bigImgContainer);
   for (let i = 1; i <= 16; i++) {
-    const artCard = `<img class="art-card" src="./images/Lucas/${i}.jpg" alt="temp">`;
+    const artCard = `<img class="art-card" src="./images/Lucas/${i}.jpg" alt="${i}">`;
     cover.innerHTML += artCard;
   }
+  setTimeout(() => {
+    applyClickToArtCards();
+  }, 100);
 }
 
 function clearCover() {
@@ -45,16 +76,31 @@ function createCoverContent(btn) {
 
 const closeCover = () => {
   cover.classList.remove('show-hide-cover');
-  closeButton.style.width = '0';
+
+  if (window.innerWidth < 1000) {
+    closeButton.style.height = '0';
+  } else {
+    closeButton.style.width = '0';
+  }
+
+  const bigImgContainer = document.querySelector('.bigImgContainer');
+  if (bigImgContainer !== null) {
+    closeBigImgContainer();
+  }
 };
 
 const openCover = () => {
   cover.classList.add('show-hide-cover');
-  closeButton.style.width = '50px';
+
+  if (window.innerWidth < 1000) {
+    closeButton.innerHTML = 'x';
+    closeButton.style.height = '30px';
+  } else {
+    closeButton.style.width = '50px';
+  }
 };
 
 function rotateArts() {
-  const rightPanel = document.querySelector('.right-panel');
   let index = 1;
   setInterval(() => {
     let imgHTML = `<img src="./images/Lucas/${index}.jpg" alt="temp">`;
@@ -116,6 +162,8 @@ function addClickOpenCover(title) {
 }
 
 function attachExternalLink(title, link) {
+  const pOnButton = document.querySelector(`#${title} p`);
+  pOnButton.innerHTML += '  <span><i class="fas fa-external-link-alt"></i> </span>';
   const button = document.querySelector(`#${title}`);
   const tempHTML = button.innerHTML;
   button.innerHTML = `
@@ -140,7 +188,7 @@ function createButtonHTML({ title, icon, link, toDoFunction }) {
   const buttonsContainer = document.querySelector('.buttons');
   const buttonHTML = `
     <li id="${title}">
-    ${icon}
+    <div>${icon}</div>
     <p>${title}</p>
     </li>
     `;

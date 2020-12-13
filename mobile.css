@@ -1,0 +1,253 @@
+body {
+  margin: 0;
+}
+
+.left-panel {
+  border-left: none;
+  width: 100%;
+  height: 50vh;
+  padding: 0;
+}
+
+.close-button {
+  position: absolute;
+  left: 0;
+  top: 50vh;
+  height: 0;
+  line-height: 30px;
+  width: 100%;
+  transition: height 0.6s ease-in-out;
+  font-size: 2em;
+}
+
+.right-panel {
+  width: 100%;
+  height: 50vh;
+}
+
+.show-hide-cover {
+  transform: translateY(100%);
+}
+
+/***************************/
+/****LEFT PANEL DIVS********/
+/***************************/
+.left-content-container {
+  padding: 20px;
+}
+
+.left-content-container p {
+  margin: 2px 0;
+}
+
+.left-content-container ul {
+  margin-top: 0;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.left-content-container ul li div {
+  font-size: 20px;
+}
+
+.left-content-container ul li {
+  padding: 5px;
+  font-size: 15px;
+  margin: 3px 3px;
+  width: 150px;
+  height: 40px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.left-content-container ul li a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.left-content-container ul li p {
+  margin: 0 5px;
+  font-size: 20px;
+  color: black;
+}
+
+.left-content-container ul li p span {
+  font-size: 12px;
+}
+
+.left-content-container ul li:active {
+  box-shadow: -3px -3px 2px #494850ff;
+  background-color: #49485033;
+  font-size: 28px;
+}
+
+.left-content-container ul li:active p {
+  font-size: 18px;
+}
+
+.footnote {
+  align-self: center;
+  margin-top: auto;
+  text-align: center;
+  font-size: 10px;
+}
+
+.footnote span {
+  font-weight: 800;
+  font-size: 12px;
+}
+
+/***************************/
+/****RIGHT PANEL DIVS********/
+/***************************/
+
+.right-panel img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/***************************/
+/****COVER PANEL DIVS********/
+/***************************/
+
+.cover {
+  float: left;
+  width: 100%;
+  height: 50vh;
+  background-color: #494850ff;
+  transition: transform 0.6s ease-in-out;
+  padding-top: 40px;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.project-card {
+  width: 100%;
+  height: 250px;
+  border: 1px solid #f8f7ff22;
+  box-shadow: -2px -2px 1px black;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  flex-flow: row nowrap;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.project-card:hover {
+  background-color: #c3cad022;
+}
+
+.thumbnail {
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 20px;
+}
+
+.project-card div {
+  color: #f8f7ffff;
+  font-size: 14px;
+}
+
+.project-card div h3 {
+  margin: 3px 0;
+}
+
+.icons {
+  font-size: 25px;
+}
+
+.icons img {
+  object-fit: cover;
+  width: 15px;
+  height: 15px;
+}
+
+/***************************/
+/****** OVERLAY DIVS********/
+/***************************/
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000000ee;
+  z-index: 3;
+  display: none;
+  padding-left: 5vw;
+  padding-top: 3vh;
+}
+
+.overlay iframe {
+  width: 90vw;
+  height: 90vh;
+}
+
+.close-overlay {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 50px;
+  background-color: #494850ff;
+  color: #f8f7ffff;
+  user-select: none;
+}
+
+.close-overlay:hover {
+  background-color: #f8f7ff22;
+  color: #000000bb;
+}
+
+/***************************/
+/****** ART DIVS********/
+/***************************/
+
+.art-card {
+  width: 45%;
+  height: 45%;
+  border: 1px solid #f8f7ff22;
+  box-shadow: -2px -2px 1px black;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.art-card:hover {
+  border: 2px solid #f8f7ffff;
+}
+
+.bigImgContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  display: none;
+  padding: 0%;
+  background-color: #000000;
+  text-align: center;
+  z-index: 3;
+}
+
+.big-art-card {
+  border-radius: 8px;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
