@@ -1,12 +1,28 @@
 const data = {
   projetos: [
     {
+      title: 'healingGame',
+      description:
+        'Healing game Im developing to simulate the healing on raids experience I had during the time I played world of warcraft',
+      img: './images/healing-project.jpg',
+      link: 'https://meianelli.github.io/healing-project/',
+      techs: ['js', 'css', 'html'],
+    },
+    {
       title: 'flyingLetters',
       description:
         'Idea for a portfolio website whhere I used p5.js library to create this cool flying text effect',
       img: './images/flyingLetters.jpg',
       link: 'https://meianelli.github.io/site-resume-moving-text/',
       techs: ['js', 'css', 'html', 'p5'],
+    },
+    {
+      title: 'entrelinhas',
+      description:
+        'Website for Entrelinhas brand that only had instagram and asked me for a Website to sell her services',
+      img: './images/entrelinhas.jpg',
+      link: 'https://meianelli.github.io/entrelinhas-website/',
+      techs: ['js', 'css', 'html'],
     },
     {
       title: 'AVOA',
