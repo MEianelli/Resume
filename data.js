@@ -1,6 +1,14 @@
 const data = {
   projetos: [
     {
+      title: 'stopwatch',
+      description:
+        'Stopwatch to help during classes to time our breaks. ',
+      img: './images/cronometro.jpg',
+      link: 'https://meianelli.github.io/cronometro/',
+      techs: ['js', 'css', 'html'],
+    },
+    {
       title: 'healingGame',
       description:
         'Healing game Im developing to simulate the healing on raids experience I had during the time I played world of warcraft',
