@@ -1,6 +1,14 @@
 const data = {
   projetos: [
     {
+      title: 'Virtual Wallet',
+      description:
+        'Expenses control using React-Redux, developed during Trybe course',
+      img: './images/wallet.jpg',
+      link: 'https://wallet-alpha.vercel.app/',
+      techs: ['js', 'css', 'html','React','Redux'],
+    },
+    {
       title: 'stopwatch',
       description:
         'Stopwatch to help during classes to time our breaks. ',
