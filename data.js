@@ -1,6 +1,14 @@
 const data = {
   projetos: [
     {
+      title: 'Ghibli-Movies',
+      description:
+        'Movies list to watch and flag as watched, developed to practice React-Redux with Thunk and Router',
+      img: './images/ghibli-movies.jpg',
+      link: 'https://ghibli-movies-sigma.vercel.app/',
+      techs: ['js', 'css', 'html','React','Redux'],
+    },
+    {
       title: 'Virtual Wallet',
       description:
         'Expenses control using React-Redux, developed during Trybe course',
