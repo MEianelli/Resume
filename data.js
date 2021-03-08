@@ -1,6 +1,14 @@
 const data = {
   projetos: [
     {
+      title: 'Trivia Game',
+      description:
+        'Trivia game (with https://opentdb.com/api_config.php API) developed as a Group Project exercise for the Redux module at Trybe',
+      img: './images/Trivia.jpg',
+      link: 'https://trivia-game-rho.vercel.app/',
+      techs: ['js', 'css', 'html','React','Redux'],
+    },
+    {
       title: 'Ghibli-Movies',
       description:
         'Movies list to watch and flag as watched, developed in 4 hours as a challenge, to practice React-Redux with Thunk and Router',
