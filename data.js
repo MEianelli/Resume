@@ -3,26 +3,26 @@ const data = {
     {
       title: 'Trivia Game',
       description:
-        'Trivia game (with https://opentdb.com/api_config.php API) developed as a Group Project exercise for the Redux module at Trybe',
+        'Trivia game (with https://opentdb.com/api_config.php API) developed as a Group Project exercise for the redux module at Trybe',
       img: './images/Trivia.jpg',
       link: 'https://trivia-game-rho.vercel.app/',
-      techs: ['js', 'css', 'html','React','Redux'],
+      techs: ['js', 'css', 'html','react','redux'],
     },
     {
       title: 'Ghibli-Movies',
       description:
-        'Movies list to watch and flag as watched, developed in 4 hours as a challenge, to practice React-Redux with Thunk and Router',
+        'Movies list to watch and flag as watched, developed in 4 hours as a challenge, to practice react-redux with Thunk and Router',
       img: './images/ghibli-movies.jpg',
       link: 'https://ghibli-movies-sigma.vercel.app/',
-      techs: ['js', 'css', 'html','React','Redux'],
+      techs: ['js', 'css', 'html','react','redux'],
     },
     {
       title: 'Virtual Wallet',
       description:
-        'Expenses control using React-Redux, developed during Trybe course',
+        'Expenses control using react-redux, developed during Trybe course',
       img: './images/wallet.jpg',
       link: 'https://wallet-alpha.vercel.app/',
-      techs: ['js', 'css', 'html','React','Redux'],
+      techs: ['js', 'css', 'html','react','redux'],
     },
     {
       title: 'stopwatch',
@@ -116,9 +116,10 @@ const data = {
     css: '<i class="fab fa-css3-alt"></i>',
     html: '<i class="fab fa-html5"></i>',
     react: '<i class="fab fa-react"></i>',
+    redux: '<img src="./images/redux.png" alt="redux">',
     p5: '<img src="./images/p5.png" alt="p5">',
     php: '<i class="fab fa-php"></i>',
-    sql: '<img src="./images/SQL.png" alt="p5">',
+    sql: '<img src="./images/SQL.png" alt="sql">',
   },
   buttons: [
     {
